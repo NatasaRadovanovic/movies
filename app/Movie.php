@@ -9,4 +9,9 @@ class Movie extends Model
     protected $fillable = [
         'title', 'genre', 'director', 'production_year', 'storyline'
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class); 
+    }
 }
