@@ -21,13 +21,13 @@
     @include('partials.error-message' , ['fieldName' => 'director'])
   </div>
   <div class="form-group">
-    <label for="year">Production year</label>
-    <input name='year' type="date" class="form-control" id="year">
-    @include('partials.error-message' , ['fieldName' => 'year'])
+    <label for="production_year">Production year</label>
+    <input name='production_year' type="number" min="1900" max="2018" class="form-control" id="production_year">
+    @include('partials.error-message' , ['fieldName' => 'production_year'])
   </div>
   <div class="form-group">
     <label for="storyline">Storyline</label>
-    <textarea name='storyline' class="form-control" id="storyline"></textarea>
+    <textarea name='storyline' maxlength="1000" class="form-control" id="storyline"></textarea>
     @include('partials.error-message' , ['fieldName' => 'storyline'])
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

@@ -5,5 +5,7 @@ Route::get('/', function () {
 });
 Route::get('/movies', 'MoviesController@index');
 Route::get('/movies/{id}', 'MoviesController@show');
+Route::post('/movies', 'MoviesController@store');
 Route::get('/create', 'MoviesController@create');
+
 
