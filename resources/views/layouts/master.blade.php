@@ -19,7 +19,7 @@
         <a class="nav-link" href='/movies'>Movies</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Add movie</a>
+        <a class="nav-link" href="/create">Add movie</a>
       </li>
     </ul>
   </div>

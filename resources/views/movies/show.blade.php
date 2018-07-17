@@ -7,4 +7,5 @@
     <p>{{ $movie->produstion_year }}<p>
     <p>{{ $movie->storyline }}</p>
     <hr></hr> 
+
 @endsection  
