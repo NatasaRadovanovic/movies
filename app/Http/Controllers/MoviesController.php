@@ -30,7 +30,7 @@ class MoviesController extends Controller
         'title' =>'required',
         'genre' => 'required', 
         'director' => 'required', 
-        'production_year' => 'required|min:1|max:10', 
+        'production_year' => 'required|min:1900|max:2018', 
         'storyline' => 'required|max:1000'
         ]); 
         
