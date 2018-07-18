@@ -18,3 +18,5 @@ Route::get('/genres/{genre}', 'GenresController@show');
 
 
 
+
+

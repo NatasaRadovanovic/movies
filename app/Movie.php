@@ -7,9 +7,7 @@ use App\Movie;
 
 class Movie extends Model
 {
-    protected $fillable = [
-        'title', 'genre', 'director', 'production_year', 'storyline'
-    ];
+    protected $fillable = ['title', 'genre', 'director', 'production_year', 'storyline'];
 
     public function comments()
     {

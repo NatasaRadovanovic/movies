@@ -1,21 +1,29 @@
 @extends('layouts.master')
 
 <style>
-    #btn
-    {
-        background-color:#363a3e;
-        border:none;
-    }
+  
+  .form-wrapp
+  {
+    width: 40%;
+    margin: 0 auto;
+  }
+  
+  #btn
+  {
+    background-color: #363a3e;
+    border: none;
+  }
 
-    .form-group label
-    {
-      font-style: italic;
-    }
+  .form-group label
+  {
+    font-style: italic;
+  }
 </style>
 
 @section('content')<br>
 <h3 style="text-align:center;">Add movie</h3><br>
-<div style="width:40%; margin:0 auto;"> 
+
+<div class="form-wrapp"> 
 <form method="POST" action="/movies">
   {{csrf_field()}} 
   <div class="form-group">

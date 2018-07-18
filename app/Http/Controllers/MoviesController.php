@@ -5,13 +5,19 @@ use App\Movie;
 
 use Illuminate\Http\Request;
 
+
 class MoviesController extends Controller
 {
+    // protected $latest_movies;
+    
     public function index()
     {
         $movies = Movie::all();
         $movies = Movie::orderBy('title', 'asc')->get();
-        return view('movies.index', compact('movies')); 
+        
+        $movie_latest = Movie::latest()->limit(5)->get();
+        
+        return view('movies.index', compact('movies', 'movie_latest')); 
     }
     
     public function show($id)

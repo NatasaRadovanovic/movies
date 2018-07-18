@@ -2,39 +2,39 @@
 <style>
     .storyline
     {
-        width:50%;
+        width: 50%;
     }
 
     #btn
     {
-        background-color:#363a3e;
-        border:none;
+        background-color: #363a3e;
+        border: none;
     }
     .card-block
     {
-        border:1px solid silver;
-        margin-bottom:5px;
-        width:50%;
-        padding:5px;
-        border-radius:10px;
+        border: 1px solid silver;
+        margin-bottom: 5px;
+        width: 50%;
+        padding: 5px;
+        border-radius: 10px;
         box-shadow: 5px 5px 5px grey;
     }
 
     .wrapp-form
     {
-        width:30%;
-        margin-top:20px;
+        width: 40%;
+        margin-top: 20px;
     }
 
     .genre
     {
-        color:#363a3e;
+        color: #363a3e;
     }
 
     .genre:hover
     {
-        text-decoration:none;
-        color:red;
+        text-decoration: none;
+        color: red;
     }
 
 </style>
@@ -62,7 +62,6 @@
     {{csrf_field()}} 
   <div class="form-group">
      <textarea rows="4" cols="50" name='content'class="form-control" id="content" placeholder="Add comment" ></textarea>
-     <input type="hidden" name="movie_id" id="movie_id" value="{{$movie->id}}">
      @include('partials.error-message' , ['fieldName' => 'content'])
    </div>
    <button  type="submit" id="btn" class="btn btn-primary">Send</button>

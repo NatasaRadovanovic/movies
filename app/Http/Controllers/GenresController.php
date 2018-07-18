@@ -11,10 +11,10 @@ class GenresController extends Controller
     public function show($genre)
     {
         $movies = Movie::byGenre($genre);
-        return view('movies.index', compact('movies'));
+
+        $movie_latest = Movie::latest()->limit(5)->get();
+       
+        return view('movies.index', compact('movies','movie_latest'));
     }
-    //  public function show($genre) {
-    //  $movies = Movie::where('genre', $genre)->get();
-    // return view('movies.index', compact('movies'));
-    // }
+
 }
