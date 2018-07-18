@@ -9,8 +9,9 @@ class Comment extends Model
     protected $fillable = [
         'content','movie_id','created_at'
     ];
+   
     public function post()
     {
-        return $this->belongsTo(Movie::class); // komentar pripada postu
+        return $this->belongsTo(Movie::class); 
     }
 }

@@ -10,6 +10,7 @@ class MoviesController extends Controller
     public function index()
     {
         $movies = Movie::all();
+        $movies = Movie::orderBy('title', 'asc')->get();
         return view('movies.index', compact('movies')); 
     }
     
@@ -30,7 +31,7 @@ class MoviesController extends Controller
         'title' =>'required',
         'genre' => 'required', 
         'director' => 'required', 
-        'production_year' => 'required|min:1900|max:2018', 
+        'production_year' => 'required|integer|between:1900,2018',
         'storyline' => 'required|max:1000'
         ]); 
         
