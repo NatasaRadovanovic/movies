@@ -1,5 +1,18 @@
 @extends('layouts.master')
 
+<style>
+    #btn
+    {
+        background-color:#363a3e;
+        border:none;
+    }
+
+    .form-group label
+    {
+      font-style: italic;
+    }
+</style>
+
 @section('content')<br>
 <h3 style="text-align:center;">Add movie</h3><br>
 <div style="width:40%; margin:0 auto;"> 
@@ -30,7 +43,7 @@
     <textarea name='storyline' maxlength="1000" class="form-control" id="storyline"></textarea>
     @include('partials.error-message' , ['fieldName' => 'storyline'])
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" id="btn" class="btn btn-primary">Submit</button>
 </form>
 </div>
 @endsection 

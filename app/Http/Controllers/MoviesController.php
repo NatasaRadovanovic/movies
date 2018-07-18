@@ -31,8 +31,8 @@ class MoviesController extends Controller
         'title' =>'required',
         'genre' => 'required', 
         'director' => 'required', 
-        'production_year' => 'required|integer|between:1900,2018',
-        'storyline' => 'required|max:1000'
+        'production_year' => 'required|integer|between: 1900, 2018',
+        'storyline' => 'required|max: 1000'
         ]); 
         
         Movie::create([ 

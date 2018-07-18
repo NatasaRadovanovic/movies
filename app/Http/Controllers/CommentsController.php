@@ -10,8 +10,7 @@ class CommentsController extends Controller
 {
     public function store(Movie $movie)
     {
-       $this->validate(request(), ['content' =>'required']); 
-        
+       $this->validate(request(), ['content' =>'required']);
         Comment::create([ 
             'content' => request('content'),
             'movie_id' => request('movie_id')
